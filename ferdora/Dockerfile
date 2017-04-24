@@ -1,8 +1,8 @@
 
-# Set the base image to Ubuntu
+# Set the base image to fedora's latest
 FROM fedora:latest
 
-# Update the repository sources list
+# Install stuff required for a GUI
 RUN \
 	dnf -y group install workstation-product-environment && \ 
     systemctl set-default graphical.target && \
